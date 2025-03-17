@@ -43,7 +43,10 @@ double da1()
 
 double VeshX()
 {
-
+    double x;
+    cout << "Введите вещественное число x: ";
+    x = da1();
+    return x;
 }
 
 int NatY()
