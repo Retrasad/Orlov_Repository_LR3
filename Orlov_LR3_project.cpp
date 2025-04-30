@@ -72,7 +72,8 @@ int naty()
 
 double okrugx(double x, int y)
 {
-
+    double del = pow(10, y);
+    return round(x * del) / factor;
 }
 
 
