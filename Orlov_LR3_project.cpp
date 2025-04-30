@@ -54,8 +54,7 @@ double veshx()
 int naty()
 {
     int y;
-    cout << "Введите натуральное число y: ";
-    endl;
+    cout << "Введите натуральное число y: " << endl;
     y = da1();
     if (y <= 0)
     {
@@ -73,7 +72,7 @@ int naty()
 double okrugx(double x, int y)
 {
     double del = pow(10, y);
-    return round(x * del) / factor;
+    return round(x * del) / del;
 }
 
 
@@ -125,10 +124,10 @@ void menu()
                 naty();
                 break;
             case 3:
-                okrugx(double x, int y);
+                okrugx();
                 break;
             case 4:
-                drobchast(double x);
+                drobchast();
                 break;
             default:
                 cout << "ТАКОГО НЕТ! Выберите задание от 1 до 4." << endl;
