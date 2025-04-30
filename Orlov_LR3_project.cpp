@@ -87,13 +87,15 @@ double drobchast(double x)
 
 void menu()
 {
+    double x = 0;
+    int y = 0;
     char cont = 'y';
     while (cont == 'y' or cont == 'Y')
     {
         int nt;
         while (true)
         {
-            cout << "Введите номер желаемого процесса вычисления (1-4):" << endl;
+            cout << "Введите номер желаемого задания (1-4):" << endl;
             cout << "1. Ввод вещественного числа x. \n"; 
             cout << "2. Ввод натурального числа y. \n"; 
             cout << "3. Округление x до y разрядов. \n"; 
@@ -118,22 +120,27 @@ void menu()
         switch (nt)
         {
             case 1:
-                veshx();
+                x = veshx();
+                cout << "x = " << x << endl;
                 break;
             case 2:
-                naty();
+                y = naty();
+                cout << "y = " << y << endl;
                 break;
             case 3:
-                okrugx();
+            {
+                double gem1 = okrugx(x, y);
+                cout << "Округленное значение: " << gem1 << endl;
                 break;
+            }
             case 4:
-                drobchast();
+                double gem2 = drobchast(x);
+                cout << "Дробная часть: " << gem2 << endl;
                 break;
-            default:
-                cout << "ТАКОГО НЕТ! Выберите задание от 1 до 4." << endl;
         }
         cout << "Хотите запустить программу вновь? (y/n):" << endl;
         cin >> cont;
+        cin.ignore(32767, '\n');
     }
     cout << "Программа завершена." << endl;
 }
