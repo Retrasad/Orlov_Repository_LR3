@@ -44,7 +44,10 @@ int da1()
 
 double veshx()
 {
-
+    double x;
+    cout << "Введите вещественное число x: ";
+    x = da();
+    return x;
 }
 
 
