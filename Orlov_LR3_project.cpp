@@ -53,7 +53,20 @@ double veshx()
 
 int naty()
 {
-
+    int y;
+    cout << "Введите натуральное число y: ";
+    endl;
+    y = da1();
+    if (y <= 0)
+    {
+        cout << "Число y должно быть больше 0." << endl;
+        y = da1();
+        return y;
+    }
+    else
+    {
+        return y;
+    }
 }
 
 
